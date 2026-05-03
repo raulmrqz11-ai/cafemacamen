@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Macamén - Modelo de Comida Veracruzana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a1a;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        :root {
+            --primary: #0d4a2c;
+            --primary-light: #1b5e3f;
+            --primary-lighter: #2d8659;
+            --accent: #c8e6c9;
+            --accent-light: #e8f5e9;
+            --text-secondary: #666666;
+            --bg-secondary: #f5f5f5;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-lighter) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: var(--accent-light);
+            margin-bottom: 1rem;
+        }
+
+        .hero .subtext {
+            font-size: 1rem;
+            color: var(--accent);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-lighter);
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .specs-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .spec-item {
+            border-left: 3px solid var(--accent);
+            padding-left: 1.5rem;
+        }
+
+        .spec-label {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .testimonial {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-lighter);
+        }
+
+        .testimonial-quote {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+
+        .cta-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div>
+        <h1>CAFÉ MACAMÉN</h1>
+        <p class="tagline">Modelo Revolucionario de Comida Veracruzana</p>
+        <p class="subtext">Entrenado con 500 años de recetas ancestrales. Optimizado para Cancún. Desplegado en tiempo real desde 2024.</p>
+        <button class="btn">Descubre Más</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Impulsado por IA*</h2>
+    <p style="margin-bottom: 2rem; color: var(--primary-lighter);">*Inteligencia Ancestral</p>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Picadas Calibradas</h3>
+            <p>Cada masa tiene precisión de 0.1mm. Rellenos con distribución simétrica.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Tamales Sintonizados</h3>
+            <p>Vapor computado molecularmente. Masa y relleno en equilibrio perfecto.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Café de Altura Prime</h3>
+            <p>Grano evaluado en 10,000 parámetros. Tueste adaptativo.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Huevos en Equilibrio</h3>
+            <p>Salsas roja y verde en proporción 1:1. Textura perfecta.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Especificaciones Técnicas</h2>
+    <div class="specs-section">
+        <div class="specs-grid">
+            <div class="spec-item">
+                <div class="spec-label">Modelo Base</div>
+                <div>Macamén-1 (2024)<br>Parámetros: 500 años<br>Entrenamiento: Recetas + Intuición</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Capas de Sabor</div>
+                <div>Capa 1: Verde/Roja/Mole<br>Capa 2: Especias Veracruzanas<br>Capa 3: Técnica Artesanal</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Disponibilidad</div>
+                <div>Desayuno: 7:00 AM - 1:00 PM<br>Cena: 6:00 PM - 9:30 PM<br>Ubicación: Cancún, Q. Roo</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Testimonios de Usuarios</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial">
+            <p class="testimonial-quote">"Pensé que era café con comida. Resulta que es una experiencia impulsada por inteligencia ancestral."</p>
+            <p class="testimonial-author">María González - Turista, CDMX</p>
+        </div>
+        <div class="testimonial">
+            <p class="testimonial-quote">"Los huevos divorciados tienen tanta precisión que me pregunto si Macamén-1 es IA o magia pura."</p>
+            <p class="testimonial-author">Carlos Ruiz - Abogado, Local</p>
+        </div>
+        <div class="testimonial">
+            <p class="testimonial-quote">"He probado café en 50 países. Este no necesita marketing, solo existir."</p>
+            <p class="testimonial-author">James Thompson - Coffee Connoisseur</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Catálogo de Servicios</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Paquetes Desayuno</h3>
+            <p>Café americano + jugo de naranja chico + fruta. Especialidades diarias rotativas. 7 AM - 1 PM.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Paquetes Cena</h3>
+            <p>Menú nocturno curado. Especialidades veracruzanas. 6 PM - 9:30 PM. Limitado pero potente.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Venta a Granel</h3>
+            <p>Café de altura por kilo o 1/2 kilo. Normal o descafeinado. Perfecto para llevar.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Especialidades Premium</h3>
+            <p>Malteadas de café, Tisanas exóticas, Postres rebañados. Innovación con raíces.</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h3>¿Listo para Experimentar?</h3>
+    <p>Café Macamén está disponible en Cancún, Quintana Roo.</p>
+    <p style="margin: 1rem 0; font-size: 0.95rem;">📍 Cancún, Q. Roo | 🕐 7 AM - 1 PM | 6 PM - 9:30 PM | 💬 @cafemacamencancun</p>
+    <button class="btn">Visítanos Ahora</button>
+</div>
+
+<div class="footer">
+    <div class="footer-brand">CAFÉ MACAMÉN</div>
+    <p>Modelo Revolucionario de Comida Veracruzana</p>
+    <p>Impulsado por Inteligencia Ancestral • Servido con Pasión</p>
+    <p style="font-size: 0.85rem; margin-top: 1rem;">© 2024 Café Macamén. Página satírica estilo Oryzo.</p>
+</div>
+
+</body>
+</html>
