@@ -25,7 +25,6 @@
             --accent: #c8e6c9;
         }
 
-        /* HEADER */
         header {
             background: white;
             padding: 1rem 2rem;
@@ -61,7 +60,6 @@
             font-weight: 600;
         }
 
-        /* HERO */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
@@ -114,7 +112,6 @@
             font-size: 1.1rem;
         }
 
-        /* GALERIA DE PLATILLOS */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -159,7 +156,6 @@
             line-height: 1.6;
         }
 
-        /* MENU PROFESIONAL */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -219,7 +215,6 @@
             line-height: 1.5;
         }
 
-        /* HISTORIA TLACOTALPAN */
         .history-section {
             background: linear-gradient(135deg, #e8f5e9 0%, white 100%);
             padding: 4rem 2rem;
@@ -260,7 +255,6 @@
             display: block;
         }
 
-        /* INFO CARDS */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -294,7 +288,6 @@
             margin-top: 0.8rem;
         }
 
-        /* CTA BUTTON */
         .cta-button {
             display: inline-block;
             padding: 1.2rem 3rem;
@@ -316,7 +309,6 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
-        /* FOOTER */
         footer {
             background: var(--primary);
             color: white;
@@ -391,7 +383,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="header-content">
         <div class="logo">☕ CAFÉ MACAMÉN</div>
@@ -402,29 +393,26 @@
     </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
     <h1>CAFÉ MACAMÉN</h1>
     <p class="hero-tagline">De Veracruz a tu Mesa</p>
     <p class="hero-subtitle">Desde 2001 llevando el auténtico sabor de Tlacotalpan a Cancún. Comida hecha a mano con recetas ancestrales y café de altura veracruzano.</p>
 </div>
 
-<!-- HISTORIA TLACOTALPAN -->
 <section class="history-section">
     <div class="history-content">
         <div class="history-text">
             <h3>De Veracruz a su Mesa</h3>
-            <p>Café Macamén nace de la pasión por preservar las tradiciones culinarias de Tlacotalpan, Veracruz. Un pueblo mágico con más de 500 años de historia, donde cada platillo cuenta la story de generaciones.</p>
+            <p>Café Macamén nace de la pasión por preservar las tradiciones culinarias de Tlacotalpan, Veracruz. Un pueblo mágico con más de 500 años de historia, donde cada platillo cuenta la historia de generaciones.</p>
             <p>Desde 2001, hemos traído a Cancún el verdadero sabor veracruzano: picadas, gordas, tamales, chilaquiles y especialidades que solo en Veracruz encontrarás hechas con el amor y la técnica que merecen.</p>
             <p>Nuestro café de altura es cuidadosamente seleccionado de las mejores plantaciones veracruzanas, tostado con precisión para ofrecerte la mejor experiencia en cada sorbo.</p>
         </div>
         <div class="history-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%232d8659' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3ETlacotalpan, Veracruz%3C/text%3E%3C/svg%3E" alt="Tlacotalpan">
+            <img src="https://images.unsplash.com/photo-1609787186125-aebf6ff96e77?w=600&h=400&fit=crop" alt="Tlacotalpan, Veracruz" style="width:100%; height:auto;">
         </div>
     </div>
 </section>
 
-<!-- GALERIA DE PLATILLOS -->
 <section>
     <div class="container">
         <h2>Nuestros Platillos Estrella</h2>
@@ -432,7 +420,7 @@
         
         <div class="gallery-grid">
             <div class="gallery-card">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f5deb3' width='400' height='300'/%3E%3C/svg%3E" alt="Gordas Veracruzanas">
+                <img src="https://images.unsplash.com/photo-1645112411341-6c4ee32510b9?w=400&h=250&fit=crop" alt="Gordas Veracruzanas" style="width:100%; height:250px; object-fit:cover;">
                 <div class="gallery-card-content">
                     <h3>Gordas Tlacotalpan</h3>
                     <p>Blancas, negras o dulces. Con crema y queso fresco. El equilibrio perfecto entre masa suave y sabor tradicional.</p>
@@ -440,7 +428,7 @@
             </div>
 
             <div class="gallery-card">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%238b4513' width='400' height='300'/%3E%3C/svg%3E" alt="Chilaquiles">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cda687?w=400&h=250&fit=crop" alt="Chilaquiles" style="width:100%; height:250px; object-fit:cover;">
                 <div class="gallery-card-content">
                     <h3>Chilaquiles en Mole</h3>
                     <p>Tortillas crujientes en salsa de chorizo o mole veracruzano. Acompañados de huevo revuelto, pollo desmenuzado y queso.</p>
@@ -448,7 +436,7 @@
             </div>
 
             <div class="gallery-card">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23daa520' width='400' height='300'/%3E%3C/svg%3E" alt="Empanadas">
+                <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd33ebc?w=400&h=250&fit=crop" alt="Empanadas" style="width:100%; height:250px; object-fit:cover;">
                 <div class="gallery-card-content">
                     <h3>Empanadas Preparadas</h3>
                     <p>Rellenas de pollo, picadillo o chorizo. Con lechuga, crema y queso. Crujientes por fuera, suculentas por dentro.</p>
@@ -456,7 +444,7 @@
             </div>
 
             <div class="gallery-card">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23ffd700' width='400' height='300'/%3E%3C/svg%3E" alt="Pancakes">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=250&fit=crop" alt="Pancakes" style="width:100%; height:250px; object-fit:cover;">
                 <div class="gallery-card-content">
                     <h3>Hot Cakes Esponjosos</h3>
                     <p>Acompañados de tocino o jamón. Bañados en miel de maple. El desayuno perfecto que te hará volver.</p>
@@ -464,7 +452,7 @@
             </div>
 
             <div class="gallery-card">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23a0522d' width='400' height='300'/%3E%3C/svg%3E" alt="Postres">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=250&fit=crop" alt="Postres" style="width:100%; height:250px; object-fit:cover;">
                 <div class="gallery-card-content">
                     <h3>Postres Caseros</h3>
                     <p>Pastel de zanahoria, tres leches, chocolate y strudel. Cada rebanada incluye café americano cortesía.</p>
@@ -472,7 +460,7 @@
             </div>
 
             <div class="gallery-card">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23654321' width='400' height='300'/%3E%3C/svg%3E" alt="Café">
+                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=250&fit=crop" alt="Café" style="width:100%; height:250px; object-fit:cover;">
                 <div class="gallery-card-content">
                     <h3>Café de Altura Veracruzano</h3>
                     <p>Grano seleccionado de las mejores plantaciones. Tostado con precisión. Disponible en kilo o 1/2 kilo.</p>
@@ -482,7 +470,6 @@
     </div>
 </section>
 
-<!-- BEBIDAS -->
 <section>
     <div class="container">
         <h2>Bebidas</h2>
@@ -591,7 +578,6 @@
     </div>
 </section>
 
-<!-- DESAYUNOS -->
 <section>
     <div class="container">
         <h2>Paquetes Desayuno</h2>
@@ -640,7 +626,6 @@
     </div>
 </section>
 
-<!-- ESPECIALIDADES VERACRUZANAS -->
 <section>
     <div class="container">
         <h2>Especialidades de Veracruz</h2>
@@ -733,7 +718,6 @@
     </div>
 </section>
 
-<!-- POSTRES -->
 <section>
     <div class="container">
         <h2>Postres</h2>
@@ -810,12 +794,11 @@
         </div>
 
         <div style="background: #fff9e6; padding: 2rem; border-radius: 10px; text-align: center; margin-top: 2rem; border-left: 5px solid var(--primary-lighter);">
-            <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">✨ Todas las rebanadas de pastel incluyen café americano</p>
+            <p style="color: var(--primary); font-weight: 700;">✨ Todas las rebanadas de pastel incluyen café americano</p>
         </div>
     </div>
 </section>
 
-<!-- CAFÉ DE ALTURA -->
 <section>
     <div class="container">
         <h2>Café de Altura Veracruzano</h2>
@@ -846,7 +829,6 @@
     </div>
 </section>
 
-<!-- INFORMACIÓN FINAL -->
 <section>
     <div class="container">
         <h2>Información</h2>
@@ -880,7 +862,6 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="footer-content">
         <div class="footer-brand">CAFÉ MACAMÉN</div>
