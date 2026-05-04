@@ -1,1 +1,645 @@
-404: Not Found
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Macamén - Cancún | Comida Veracruzana Auténtica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+
+        :root {
+            --primary: #0d4a2c;
+            --primary-light: #1b5e3f;
+            --primary-lighter: #2d8659;
+            --accent: #c8e6c9;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f5f5f5;
+            --bg-lighter: #e8f5e9;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: #e8f5e9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .menu-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .menu-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 5px solid var(--primary-lighter);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .menu-category h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .menu-item {
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .item-price {
+            color: var(--primary-lighter);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .item-description {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-lighter);
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .highlights {
+            background: linear-gradient(135deg, var(--bg-lighter) 0%, white 100%);
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .highlights h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .highlight-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .highlight-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            color: var(--primary-lighter);
+        }
+
+        .highlight-text {
+            color: var(--text-light);
+        }
+
+        .highlight-text strong {
+            color: var(--primary);
+            display: block;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer-info p {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 1rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .menu-categories {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo">☕ CAFÉ MACAMÉN</div>
+        <div class="contact-info">
+            <a href="https://wa.me/529987685449">📱 998 768 5449</a>
+            <a href="https://instagram.com/cafemacamen">📷 @cafemacamen</a>
+        </div>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>CAFÉ MACAMÉN</h1>
+        <p class="hero-tagline">Llevamos el Sabor de Veracruz a tu Mesa</p>
+        <p class="hero-subtitle">Comida auténtica veracruzana hecha a mano con ingredientes frescos. Desde 2001 deleitando a Cancún con el verdadero sabor de la región.</p>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <h2>Bebidas</h2>
+        <p class="section-subtitle">Café premium y bebidas refrescantes</p>
+        
+        <div class="menu-categories">
+            <div class="menu-category">
+                <h3>Bebidas Calientes</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Café Americano</span><span class="item-price">$57</span></div>
+                    <div class="item-description">Regular o Descafeinado</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Café Expresso</span><span class="item-price">$57</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Capuchino</span><span class="item-price">$69</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Latte</span><span class="item-price">$69</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Té Caliente</span><span class="item-price">$51</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Chocolate Caliente</span><span class="item-price">$69</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Bebidas Frías</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Té Frío</span><span class="item-price">$61</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Americano Frío</span><span class="item-price">$59</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Naranjada o Limonada</span><span class="item-price">$64</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Preparado de Frutas</span><span class="item-price">$93</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Smoothies</span><span class="item-price">$87</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Agua Embotellada</span><span class="item-price">$35</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Especialidades Macamén</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Malteada de Café</span><span class="item-price">$79</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Capuchino Preparado</span><span class="item-price">$69</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Frappé</span><span class="item-price">$79</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Dulce de la Barra</span><span class="item-price">$79-$96</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Tizana</span><span class="item-price">$107</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Paquetes Desayuno</h2>
+        <p class="section-subtitle">Incluyen café americano, jugo de naranja chico o fruta</p>
+        
+        <div class="menu-categories">
+            <div class="menu-category">
+                <h3>Opciones Variadas</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Desayuno Veracruzano</span><span class="item-price">$218</span></div>
+                    <div class="item-description">2 Picadas a 2 Gordas</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Desayuno Macamén</span><span class="item-price">$254</span></div>
+                    <div class="item-description">Chilaquiles en salsa de Chorizo</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Desayuno Regional</span><span class="item-price">$243</span></div>
+                    <div class="item-description">Huevos Motuleños con Tostada</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Desayuno Carretero</span><span class="item-price">$249</span></div>
+                    <div class="item-description">Enfrijoladas Rellenas de Huevo</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Desayuno Azteca</span><span class="item-price">$254</span></div>
+                    <div class="item-description">Huarache con Pollo o Chorizo</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Desayuno Americano</span><span class="item-price">$247</span></div>
+                    <div class="item-description">Huevos Revueltos con Frijoles</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Especialidades de Veracruz</h2>
+        <p class="section-subtitle">Hecho a mano • De Veracruz a su Mesa</p>
+        
+        <div class="menu-categories">
+            <div class="menu-category">
+                <h3>Picadas y Gordas</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Picadas</span><span class="item-price">$56</span></div>
+                    <div class="item-description">Con Salsa Verde, Roja, Ranchera o Chipotle</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Gordas</span><span class="item-price">$56</span></div>
+                    <div class="item-description">Blancas, Negras o Dulces</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Empanadas Natural</span><span class="item-price">$58</span></div>
+                    <div class="item-description">Pollo, Picadillo o Chorizo</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Empanadas Preparadas</span><span class="item-price">$74</span></div>
+                    <div class="item-description">Con Lechuga, Crema y Queso</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Especialidades</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Tamales Veracruzanos</span><span class="item-price">$86-$104</span></div>
+                    <div class="item-description">De elote con carne de cerdo o de masa con pollo</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Plátanos Rellenos</span><span class="item-price">$96-$184</span></div>
+                    <div class="item-description">Naturales o Rellenos de Queso</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Pambazo Veracruzano</span><span class="item-price">$96</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Chicharrón</span><span class="item-price">$166</span></div>
+                    <div class="item-description">Acompañado de tortilla y frijoles</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Mondongo Veracruzano</span><span class="item-price">$208</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Sándwiches y Tortas</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Torta Especial Macamén</span><span class="item-price">$189</span></div>
+                    <div class="item-description">Pollo, Chorizo, Jamón y Queso</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Torta de Milanesa</span><span class="item-price">$219</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Club Sándwich</span><span class="item-price">$227</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Molletes Naturales</span><span class="item-price">$147</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Postres</h2>
+        
+        <div class="menu-categories">
+            <div class="menu-category">
+                <h3>Helados y Clásicos</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Helado Sencillo</span><span class="item-price">$60</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Helado Doble</span><span class="item-price">$87</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Tres Marías / Banana Split</span><span class="item-price">$131</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Flotante c/ Coca Cola</span><span class="item-price">$124</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Pasteles y Repostería</h3>
+                <div class="menu-item">
+                    <div class="item-name"><span>Pastel de Zanahoria</span><span class="item-price">$145</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Pastel de Chocolate</span><span class="item-price">$145</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Strudel de Manzana</span><span class="item-price">$132</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Torta de Elote</span><span class="item-price">$132</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name"><span>Brownie</span><span class="item-price">$46</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlights">
+            <h3>✨ Todas las rebanadas de pastel incluyen café americano</h3>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #e8f5e9 0%, white 100%);">
+    <div class="container">
+        <h2>Información</h2>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>📍 Ubicación</h3>
+                <p>Cancún, Quintana Roo</p>
+                <p><strong>Abierto todos los días</strong></p>
+            </div>
+            
+            <div class="info-card">
+                <h3>🕐 Horarios</h3>
+                <p><strong>Desayuno:</strong> 7:00 AM - 1:00 PM</p>
+                <p><strong>Cena:</strong> 6:00 PM - 9:30 PM</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>📱 Contacto</h3>
+                <p><a href="https://wa.me/529987685449" style="color: var(--primary); text-decoration: none; font-weight: 600;">WhatsApp: 998 768 5449</a></p>
+                <p><a href="https://instagram.com/cafemacamen" style="color: var(--primary); text-decoration: none; font-weight: 600;">@cafemacamen</a></p>
+            </div>
+        </div>
+
+        <div class="highlights" style="margin-top: 2rem;">
+            <h3>🎉 Servicios Especiales</h3>
+            <div class="highlight-list">
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎂</span>
+                    <div class="highlight-text">
+                        <strong>Cortesía por Cumpleaños</strong>
+                        Con 3+ personas e INE
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎁</span>
+                    <div class="highlight-text">
+                        <strong>Descuento INAPAM</strong>
+                        20% de descuento
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🚚</span>
+                    <div class="highlight-text">
+                        <strong>Pedidos a Domicilio</strong>
+                        Consulta disponibilidad
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">☕</span>
+                    <div class="highlight-text">
+                        <strong>Venta de Café</strong>
+                        Café de altura por kilo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">CAFÉ MACAMÉN</div>
+        <p>Con todo el Sabor de Veracruz</p>
+        
+        <div class="footer-info">
+            <div>
+                <strong>Ubicación</strong>
+                <p>Cancún, Quintana Roo</p>
+            </div>
+            <div>
+                <strong>WhatsApp</strong>
+                <p><a href="https://wa.me/529987685449">998 768 5449</a></p>
+            </div>
+            <div>
+                <strong>Redes Sociales</strong>
+                <p><a href="https://instagram.com/cafemacamen">@cafemacamen</a></p>
+            </div>
+        </div>
+        
+        <p class="footer-note">© 2001-2024 Café Macamén. Comida Veracruzana Auténtica. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
