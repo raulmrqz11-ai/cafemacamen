@@ -215,7 +215,6 @@
             background: var(--primary);
             color: white;
             padding: 6rem 2rem;
-            text-align: center;
         }
 
         .menu-section h2 {
@@ -223,6 +222,7 @@
             font-weight: 900;
             margin-bottom: 3rem;
             letter-spacing: -1px;
+            text-align: center;
         }
 
         .menu-grid {
@@ -316,6 +316,14 @@
             text-align: center;
         }
 
+        .info-section h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            letter-spacing: -1px;
+            color: white;
+        }
+
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -342,6 +350,16 @@
             font-size: 1rem;
             line-height: 1.8;
             color: #e8f5e9;
+        }
+
+        .info-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info-card a:hover {
+            color: white;
         }
 
         /* FOOTER */
@@ -436,6 +454,9 @@
         <nav>
             <a href="#platillos">Platillos</a>
             <a href="#bebidas">Bebidas</a>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#postres">Postres</a>
+            <a href="#cafe">Café</a>
             <a href="#info">Contacto</a>
         </nav>
         <div class="contact-header">
@@ -453,7 +474,7 @@
             Av Huayacán Supermanzana<br>
             77560 Cancún, Q.R.
         </p>
-        <a href="#platillos" class="cta-button">VER MENÚ DIGITAL</a>
+        <a href="#bebidas" class="cta-button">VER MENÚ DIGITAL</a>
     </div>
 </div>
 
@@ -484,9 +505,18 @@
     </div>
 </section>
 
+<section class="platillo-section reverse">
+    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&h=600&fit=crop" alt="Hot Cakes" class="platillo-image">
+    <div class="platillo-content">
+        <h2>Hot Cakes Esponjosos</h2>
+        <p>Acompañados de tocino o jamón. Bañados en miel de maple. El desayuno perfecto que te hará volver cada mañana. Hecho a mano con ingredientes de calidad.</p>
+        <a href="https://wa.me/529987685449" class="cta-button" style="display:inline-block; width:fit-content;">ORDENAR AHORA</a>
+    </div>
+</section>
+
 <section id="bebidas" class="menu-section">
     <div class="container">
-        <h2>BEBIDAS Y ESPECIALIDADES</h2>
+        <h2>BEBIDAS</h2>
         
         <div class="menu-grid">
             <div class="menu-item">
@@ -497,12 +527,36 @@
                     <div class="item-desc">Regular o Descafeinado</div>
                 </div>
                 <div class="item">
+                    <div class="item-name">Expresso</div>
+                    <div class="item-price">$57</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Expresso Doble</div>
+                    <div class="item-price">$59</div>
+                </div>
+                <div class="item">
                     <div class="item-name">Capuchino</div>
+                    <div class="item-price">$69</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Lechero</div>
                     <div class="item-price">$69</div>
                 </div>
                 <div class="item">
                     <div class="item-name">Latte</div>
                     <div class="item-price">$69</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Capuchino Expresso</div>
+                    <div class="item-price">$71</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Té Caliente</div>
+                    <div class="item-price">$51</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Té Doble</div>
+                    <div class="item-price">$59</div>
                 </div>
                 <div class="item">
                     <div class="item-name">Chocolate Caliente</div>
@@ -513,41 +567,519 @@
             <div class="menu-item">
                 <h3>BEBIDAS FRÍAS</h3>
                 <div class="item">
+                    <div class="item-name">Té Frío</div>
+                    <div class="item-price">$61</div>
+                </div>
+                <div class="item">
                     <div class="item-name">Americano Frío</div>
                     <div class="item-price">$59</div>
                 </div>
                 <div class="item">
-                    <div class="item-name">Smoothies</div>
-                    <div class="item-price">$87</div>
-                    <div class="item-desc">Fresa, Mango, Piña, Melón</div>
+                    <div class="item-name">Naranjada</div>
+                    <div class="item-price">$64</div>
                 </div>
                 <div class="item">
-                    <div class="item-name">Malteada o Champola</div>
+                    <div class="item-name">Limonada</div>
+                    <div class="item-price">$64</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Preparado Frutas</div>
+                    <div class="item-price">$93</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Aguas Frescas</div>
+                    <div class="item-price">$57</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Refresco</div>
+                    <div class="item-price">$52</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Flotante c/Coca Cola</div>
+                    <div class="item-price">$124</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Malteada</div>
                     <div class="item-price">$115</div>
                 </div>
                 <div class="item">
-                    <div class="item-name">Agua Embotellada</div>
-                    <div class="item-price">$35</div>
+                    <div class="item-name">Champola</div>
+                    <div class="item-price">$115</div>
                 </div>
             </div>
 
             <div class="menu-item">
-                <h3>PAQUETES DESAYUNO</h3>
+                <h3>ESPECIALIDADES MACAMÉN</h3>
                 <div class="item">
-                    <div class="item-name">Desayuno Veracruzano</div>
+                    <div class="item-name">Tizana</div>
+                    <div class="item-price">$107</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Malteada de Café</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Capuchino Preparado</div>
+                    <div class="item-price">$69</div>
+                    <div class="item-desc">Cajeta o Cocoa</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Frappé Moka</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Frappé Capuchino</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Oreo Frozen</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Moka Frozen</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Caramel Machiato</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Taro Frozen</div>
+                    <div class="item-price">$79</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Chai Latte</div>
+                    <div class="item-price">$89-$96</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="especialidades" class="menu-section">
+    <div class="container">
+        <h2>PAQUETES DESAYUNO</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>ESPECIALIDADES</h3>
+                <div class="item">
+                    <div class="item-name">Burritas con Papas</div>
+                    <div class="item-price">$254</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Veracruzano</div>
                     <div class="item-price">$218</div>
-                    <div class="item-desc">2 Picadas o 2 Gordas con café y jugo</div>
+                    <div class="item-desc">2 Picadas o 2 Gordas</div>
                 </div>
                 <div class="item">
-                    <div class="item-name">Desayuno Macamén</div>
+                    <div class="item-name">Azteca</div>
                     <div class="item-price">$254</div>
-                    <div class="item-desc">Chilaquiles en salsa de chorizo</div>
+                    <div class="item-desc">Huarache Pollo/Picadillo/Chorizo</div>
                 </div>
                 <div class="item">
-                    <div class="item-name">Desayuno Azteca</div>
+                    <div class="item-name">Macamén</div>
                     <div class="item-price">$254</div>
-                    <div class="item-desc">Huarache con Pollo o Chorizo</div>
+                    <div class="item-desc">Chilaquiles</div>
                 </div>
+                <div class="item">
+                    <div class="item-name">Carretero</div>
+                    <div class="item-price">$249</div>
+                    <div class="item-desc">Enfrijoladas rellenas huevo</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Casa</div>
+                    <div class="item-price">$243</div>
+                    <div class="item-desc">Huevos con Rajas y Queso</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Regional</div>
+                    <div class="item-price">$243</div>
+                    <div class="item-desc">Huevos Motuleños</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Americano</div>
+                    <div class="item-price">$247</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Norteño</div>
+                    <div class="item-price">$285</div>
+                    <div class="item-desc">Machaca</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>BUENOS DÍAS TLACOTALPAN</h3>
+                <div class="item">
+                    <div class="item-name">Yogurth Granola y Miel</div>
+                    <div class="item-price">$112</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Fruta Temporada</div>
+                    <div class="item-price">$88/$130</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Ensalada de Fruta</div>
+                    <div class="item-price">$130/$169</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Hot Cakes</div>
+                    <div class="item-price">$112</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Hot Cakes c/Tocino</div>
+                    <div class="item-price">$159</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Jugo Naranja</div>
+                    <div class="item-price">$96</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Jugo Chico</div>
+                    <div class="item-price">$78</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Chocomilk</div>
+                    <div class="item-price">$85</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Vaso Leche</div>
+                    <div class="item-price">$62</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Licuados</div>
+                    <div class="item-price">$96</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>DE LA GRANJA</h3>
+                <div class="item">
+                    <div class="item-name">Huevos Tibios</div>
+                    <div class="item-price">$119</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Estrellados</div>
+                    <div class="item-price">$181</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Revueltos</div>
+                    <div class="item-price">$189</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Rancheros</div>
+                    <div class="item-price">$199</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Tirados</div>
+                    <div class="item-price">$185</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Divorciados</div>
+                    <div class="item-price">$189</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Omelette</div>
+                    <div class="item-price">$199</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Revueltos con Camarones</div>
+                    <div class="item-price">$232</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu-section">
+    <div class="container">
+        <h2>VERACRUZ A SU MESA</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>PICADAS Y GORDAS</h3>
+                <div class="item">
+                    <div class="item-name">Picadas</div>
+                    <div class="item-price">$56</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Gordas</div>
+                    <div class="item-price">$56</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Picadas/Gordas Preparadas</div>
+                    <div class="item-price">$74</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Gordas Tlacotalpeña</div>
+                    <div class="item-price">$74</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Empanadas Natural</div>
+                    <div class="item-price">$58</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Empanadas Preparadas</div>
+                    <div class="item-price">$74</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Garnachas</div>
+                    <div class="item-price">$74</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Chicharrón Salsa Verde</div>
+                    <div class="item-price">$166</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Chicharrón Salsa Roja</div>
+                    <div class="item-price">$166</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>MÁS AROMA Y SABOR</h3>
+                <div class="item">
+                    <div class="item-name">Plátanos Fritos Naturales</div>
+                    <div class="item-price">$96</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Plátanos con Crema/Queso</div>
+                    <div class="item-price">$109</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Plátanos Rellenos</div>
+                    <div class="item-price">$184</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Pambazo Veracruzano</div>
+                    <div class="item-price">$96</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Mondongo Veracruzano</div>
+                    <div class="item-price">$208</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Casamiento</div>
+                    <div class="item-price">$138</div>
+                    <div class="item-desc">Arroz+Frijol+Plátano</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Bombas con Nata</div>
+                    <div class="item-price">$98</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Bombas Frijoles</div>
+                    <div class="item-price">$89</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Bombas Frijoles+Queso</div>
+                    <div class="item-price">$118</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>TAMALES Y ANTOJITOS</h3>
+                <div class="item">
+                    <div class="item-name">Tamales de Elote con Cerdo</div>
+                    <div class="item-price">$104</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Tamales de Masa con Pollo</div>
+                    <div class="item-price">$86</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Chilaquiles Rojos</div>
+                    <div class="item-price">$206</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Chilaquiles Verdes</div>
+                    <div class="item-price">$206</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Enfrijoladas</div>
+                    <div class="item-price">$206</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Enchiladas de Mole</div>
+                    <div class="item-price">$206</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Enchiladas Suizas</div>
+                    <div class="item-price">$206</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Consomé de Pollo</div>
+                    <div class="item-price">$142</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Sopa del Día</div>
+                    <div class="item-price">$114</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu-section">
+    <div class="container">
+        <h2>CARNES Y ENSALADAS</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>PLATOS FUERTES</h3>
+                <div class="item">
+                    <div class="item-name">Arrachera con Papas</div>
+                    <div class="item-price">$276</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Cecina</div>
+                    <div class="item-price">$259</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Milanesa</div>
+                    <div class="item-price">$269</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Pechuga de Pollo Asada</div>
+                    <div class="item-price">$269</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>ENSALADAS</h3>
+                <div class="item">
+                    <div class="item-name">Ensalada de Pollo</div>
+                    <div class="item-price">$205</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Ensalada de Atún</div>
+                    <div class="item-price">$205</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Ensalada Rusa con Pollo</div>
+                    <div class="item-price">$205</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>PARA LOS JAROCHITOS</h3>
+                <div class="item">
+                    <div class="item-name">Desayuno Infantil</div>
+                    <div class="item-price">$148</div>
+                    <div class="item-desc">3 Mini Hotcakes, Molletes, 1 Huevo Revuelto, Jugo Naranja</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Comida Infantil</div>
+                    <div class="item-price">$153</div>
+                    <div class="item-desc">Mini Tacos, Mini Hamburguesa, Consomé, Agua Fresca, Sopa Fideo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="postres" class="menu-section">
+    <div class="container">
+        <h2>POSTRES</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>REPOSTERÍA</h3>
+                <div class="item">
+                    <div class="item-name">Pastel de Zanahoria</div>
+                    <div class="item-price">$145</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Pastel de Chocolate</div>
+                    <div class="item-price">$145</div>
+                    <div class="item-desc">Incluye café americano</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Tres Leches</div>
+                    <div class="item-price">$131</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Strudel Manzana</div>
+                    <div class="item-price">$132</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Torta de Elote</div>
+                    <div class="item-price">$132</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Panque Naranja</div>
+                    <div class="item-price">$132</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Brownie</div>
+                    <div class="item-price">$46</div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>HELADOS</h3>
+                <div class="item">
+                    <div class="item-name">Helado Sencillo</div>
+                    <div class="item-price">$60</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Helado Doble</div>
+                    <div class="item-price">$87</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Tres Marías</div>
+                    <div class="item-price">$131</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Banana Split</div>
+                    <div class="item-price">$131</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">Flotante c/Coca Cola</div>
+                    <div class="item-price">$124</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cafe" class="menu-section">
+    <div class="container">
+        <h2>CAFÉ DE ALTURA VERACRUZANO</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>CAFÉ TOSTADO</h3>
+                <div class="item">
+                    <div class="item-name">Kilo</div>
+                    <div class="item-price">Consultar</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">1/2 Kilo</div>
+                    <div class="item-price">Consultar</div>
+                </div>
+                <div class="item-desc">100% Grano o Molido - Seleccionado y tostado diariamente</div>
+            </div>
+
+            <div class="menu-item">
+                <h3>CAFÉ DESCAFEINADO</h3>
+                <div class="item">
+                    <div class="item-name">Kilo</div>
+                    <div class="item-price">Consultar</div>
+                </div>
+                <div class="item">
+                    <div class="item-name">1/2 Kilo</div>
+                    <div class="item-price">Consultar</div>
+                </div>
+                <div class="item-desc">100% Natural sin perder aroma ni sabor</div>
+            </div>
+
+            <div class="menu-item">
+                <h3>VENTA A GRANEL</h3>
+                <div class="item">
+                    <div class="item-name">Contacta para precios especiales</div>
+                </div>
+                <div class="item-desc">Kilo o fracciones - Grano o Molido - Entregas a domicilio</div>
             </div>
         </div>
     </div>
@@ -565,22 +1097,27 @@
 
 <section id="info" class="info-section">
     <div class="container">
-        <h2 style="color:white; margin-bottom:3rem;">INFORMACIÓN</h2>
+        <h2>INFORMACIÓN</h2>
         
         <div class="info-grid">
             <div class="info-card">
                 <h3>UBICACIÓN</h3>
-                <p>Calle Sierra Madre, Av Huayacán<br>Supermanzana, Cancún, Q.R. 77560</p>
+                <p>Calle Sierra Madre, Av Huayacán<br>Supermanzana, Cancún, Q.R. 77560<br><br>Abierto todos los días</p>
             </div>
             
             <div class="info-card">
                 <h3>HORARIOS</h3>
-                <p><strong>Desayuno:</strong> 7:00 AM - 1:00 PM<br><strong>Cena:</strong> 6:00 PM - 9:30 PM<br>Abierto todos los días</p>
+                <p><strong>Desayuno:</strong> 7:00 AM - 1:00 PM<br><strong>Cena:</strong> 6:00 PM - 9:30 PM<br><br>Servicio a domicilio disponible</p>
             </div>
             
             <div class="info-card">
                 <h3>CONTACTO</h3>
-                <p><a href="https://wa.me/529987685449" style="color:#c8e6c9; text-decoration:none; font-weight:600;">WhatsApp: 998 768 5449</a><br><a href="https://instagram.com/cafemacamen" style="color:#c8e6c9; text-decoration:none; font-weight:600;">@cafemacamen</a></p>
+                <p><a href="https://wa.me/529987685449">WhatsApp: 998 768 5449</a><br><a href="https://instagram.com/cafemacamen">Instagram: @cafemacamen</a><br><a href="https://facebook.com/cafemacamencancun">Facebook: Café Macamen Cancún</a></p>
+            </div>
+
+            <div class="info-card">
+                <h3>PROMOCIONES</h3>
+                <p>20% Descuento INAPAM<br>Cortesía cumpleañero<br>Pedidos a domicilio<br>Café a granel disponible</p>
             </div>
         </div>
     </div>
